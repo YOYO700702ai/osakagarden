@@ -323,13 +323,13 @@
 
       .plan-grid {
         display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1fr);
-        gap: 28px;
+        grid-template-columns: minmax(270px, 0.68fr) minmax(0, 1.32fr);
+        gap: 36px;
         align-items: center;
       }
 
       .plan-grid.compact-plan-grid {
-        grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1.42fr);
+        grid-template-columns: minmax(270px, 0.68fr) minmax(0, 1.32fr);
       }
 
       .plan-card {
@@ -349,33 +349,14 @@
       .plan-card.plan-small {
         max-width: 420px;
         margin: 0 auto;
+        padding: 16px;
       }
 
       .plan-card.plan-small img {
-        width: auto;
-        max-width: 360px;
-        max-height: none;
-        margin: 0 auto;
-      }
-
-      .plan-stack {
-        display: grid;
-        gap: 32px;
-      }
-
-      .plan-head {
-        max-width: 760px;
-      }
-
-      .plan-card.plan-floor {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 24px;
-      }
-
-      .plan-card.plan-floor img {
         width: 100%;
-        max-height: none;
+        max-width: 100%;
+        max-height: 360px;
+        object-fit: contain;
         margin: 0 auto;
         display: block;
       }
@@ -558,8 +539,11 @@
       </section>
 
       <section class="section">
-        <div class="plan-stack">
-          <div class="plan-head">
+        <div class="plan-grid compact-plan-grid">
+          <div class="plan-card plan-small">
+            <img src="assets/properties/sanno/floorplan-display.png" alt="山王民泊平面圖">
+          </div>
+          <div>
             <p class="kicker">Layout</p>
             <h2>2 層一戶建，適合多人住宿配置</h2>
             <ul class="mini-list">
@@ -568,9 +552,6 @@
               <li>2F 為兩間和風臥室，另有獨立衛生間與洗面台。</li>
               <li>全屋骨架翻新完成，適合作為日本民泊投資參訪案例。</li>
             </ul>
-          </div>
-          <div class="plan-card plan-floor">
-            <img src="assets/properties/sanno/floorplan-display.png" alt="山王民泊平面圖">
           </div>
         </div>
       </section>
