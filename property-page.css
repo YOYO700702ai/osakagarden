@@ -339,14 +339,65 @@ h1 {
   color: var(--muted);
 }
 
+/* Mobile back-to-home bar — hidden on desktop */
+.mobile-back-bar {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .site-header {
     display: none;
   }
 
+  .mobile-back-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    background: rgba(255, 253, 247, 0.96);
+    box-shadow: 0 4px 16px rgba(22, 50, 75, 0.08);
+    backdrop-filter: blur(6px);
+  }
+
+  .mobile-back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .back-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 999px;
+    background: rgba(29, 37, 48, 0.06);
+  }
+
+  .mobile-back-link img {
+    height: 30px;
+    width: auto;
+  }
+
+  .back-label {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
   .page {
     width: min(100% - 28px, 1180px);
-    margin-top: 18px;
+    margin-top: 74px;
   }
 
   .property-hero,
@@ -354,27 +405,98 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .facts {
-    grid-template-columns: repeat(2, 1fr);
+  .property-hero {
+    gap: 24px;
+    padding: 26px;
   }
 
-  .gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .property-hero,
   .section {
-    padding: 22px;
+    padding: 26px;
+    margin-top: 22px;
   }
 
-  .facts,
-  .gallery {
-    grid-template-columns: 1fr;
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hero-photo {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .hero-photo::before {
+    width: 80px;
+    height: 22px;
+    top: -10px;
+    left: 30px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .lead {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .chips span {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .fact {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .fact strong {
+    font-size: 18px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .plan-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-label {
+    display: none;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .section h2 {
+    font-size: 22px;
   }
 }

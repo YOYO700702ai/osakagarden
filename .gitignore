@@ -7,6 +7,9 @@ HANDOFF.md
 
 # Dev preview screenshots / leftovers
 preview-*.png
+audit-mobile-*.png
+verify-mobile-*.png
+verify2-mobile-*.png
 *.code-workspace
 backgrounds-preview.png
 assets-preview.png
@@ -15,6 +18,12 @@ new-step-images-preview.png
 image-contact-sheet.png
 osaka-garden-index.html
 odjowkjfdoijure4.png
+2daec047-*.png
+3c5eb7de-*.png
+7a9c7ac6-*.png
+c6dca340-*.png
+ee7fdbdc-*.png
+f6f8ef1b-*.png
 
 # Browser temp profiles
 .tmp/

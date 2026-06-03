@@ -207,3 +207,70 @@ body {
     right: 6px;
   }
 }
+
+/* === Mobile back-to-home bar (used by all property pages) === */
+.mobile-back-bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    display: none !important;
+  }
+
+  .mobile-back-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    background: rgba(255, 253, 247, 0.96);
+    box-shadow: 0 4px 16px rgba(22, 50, 75, 0.08);
+    backdrop-filter: blur(6px);
+  }
+
+  .mobile-back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1d2530;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .back-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 999px;
+    background: rgba(29, 37, 48, 0.06);
+  }
+
+  .mobile-back-link img {
+    height: 30px;
+    width: auto;
+  }
+
+  .back-label {
+    font-size: 14px;
+    color: #65717f;
+  }
+
+  .page {
+    margin-top: 74px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-label {
+    display: none;
+  }
+}
