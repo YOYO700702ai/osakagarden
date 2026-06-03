@@ -1,0 +1,31 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+HANDOFF.md
+
+# Dev preview screenshots / leftovers
+preview-*.png
+*.code-workspace
+backgrounds-preview.png
+assets-preview.png
+new-minpaku-images-preview.png
+new-step-images-preview.png
+image-contact-sheet.png
+osaka-garden-index.html
+odjowkjfdoijure4.png
+
+# Browser temp profiles
+.tmp/
+.tmp-edge/
+.tmp-edge-mobile/
+.tmp-edge-tall/
+
+# Claude Code local settings
+.claude/
+
+# Sub folders not part of the site
+osaka/
+osaka garden/
+大阪/

@@ -1,0 +1,209 @@
+body {
+  background:
+    linear-gradient(rgba(255, 253, 247, 0.18), rgba(255, 253, 247, 0.18)),
+    url("assets/backgrounds/property-page-bg.png"),
+    #fffdf7 !important;
+  background-size: cover, cover, auto !important;
+  background-position: center top !important;
+  background-attachment: fixed !important;
+}
+
+.property-hero,
+.hero,
+.section {
+  position: relative;
+  overflow: hidden;
+  border: 0 !important;
+  background:
+    linear-gradient(rgba(255, 253, 247, 0.26), rgba(255, 253, 247, 0.26)),
+    url("assets/backgrounds/property-panel-frame.png") !important;
+  background-size: 100% 100%, 100% 100% !important;
+  background-position: center !important;
+  box-shadow: 0 22px 60px rgba(28, 46, 62, 0.14) !important;
+}
+
+.property-hero::after,
+.hero::after,
+.section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 16px;
+  border: 1px dashed rgba(24, 61, 94, 0.16);
+  border-radius: 28px;
+  pointer-events: none;
+}
+
+.property-hero > *,
+.hero > *,
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-photo,
+.photo-frame,
+.plan-card,
+.gallery figure,
+.showcase-main,
+.showcase-strip img {
+  border: 8px solid rgba(255, 253, 247, 0.92);
+  box-shadow:
+    0 14px 30px rgba(34, 54, 72, 0.13),
+    0 0 0 1px rgba(36, 49, 66, 0.08);
+}
+
+.gallery figure {
+  border-width: 6px;
+}
+
+.hero-photo img,
+.photo-frame img,
+.showcase-main img,
+.showcase-strip img,
+.gallery img,
+.plan-card img {
+  cursor: zoom-in;
+}
+
+.hero-photo img:hover,
+.photo-frame img:hover,
+.showcase-main img:hover,
+.showcase-strip img:hover,
+.gallery img:hover,
+.plan-card img:hover {
+  filter: saturate(1.03) contrast(1.02);
+}
+
+.property-lightbox {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 28px;
+  background: rgba(19, 27, 38, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.property-lightbox.is-open {
+  display: grid;
+}
+
+.property-lightbox__panel {
+  position: relative;
+  width: min(1180px, 100%);
+  max-height: calc(100vh - 56px);
+  padding: 18px;
+  border-radius: 30px;
+  background:
+    linear-gradient(rgba(255, 253, 247, 0.54), rgba(255, 253, 247, 0.54)),
+    url("assets/backgrounds/property-panel-frame.png");
+  background-size: 100% 100%;
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.32);
+}
+
+.property-lightbox__image {
+  width: 100%;
+  max-height: calc(100vh - 150px);
+  object-fit: contain;
+  border: 10px solid #fffdf7;
+  border-radius: 20px;
+  background: #fffdf7;
+  box-shadow: 0 14px 32px rgba(20, 28, 40, 0.18);
+}
+
+.property-lightbox__caption {
+  min-height: 28px;
+  margin: 10px 56px 0;
+  color: #243142;
+  font-weight: 900;
+  text-align: center;
+}
+
+.property-lightbox__close,
+.property-lightbox__prev,
+.property-lightbox__next {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  color: #fffdf7;
+  background: #df2f39;
+  box-shadow: 0 10px 24px rgba(223, 47, 57, 0.24);
+  cursor: pointer;
+  font: inherit;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.property-lightbox__close {
+  top: -16px;
+  right: -16px;
+}
+
+.property-lightbox__prev,
+.property-lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1870a8;
+}
+
+.property-lightbox__prev {
+  left: -16px;
+}
+
+.property-lightbox__next {
+  right: -16px;
+}
+
+.property-lightbox__close:focus-visible,
+.property-lightbox__prev:focus-visible,
+.property-lightbox__next:focus-visible {
+  outline: 3px solid rgba(255, 253, 247, 0.9);
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  body {
+    background-attachment: scroll !important;
+  }
+
+  .property-lightbox {
+    padding: 14px;
+  }
+
+  .property-lightbox__panel {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .property-lightbox__image {
+    max-height: calc(100vh - 128px);
+    border-width: 6px;
+  }
+
+  .property-lightbox__caption {
+    margin-inline: 48px;
+    font-size: 14px;
+  }
+
+  .property-lightbox__close,
+  .property-lightbox__prev,
+  .property-lightbox__next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .property-lightbox__prev {
+    left: 6px;
+  }
+
+  .property-lightbox__next {
+    right: 6px;
+  }
+}
