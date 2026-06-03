@@ -358,6 +358,28 @@
         margin: 0 auto;
       }
 
+      .plan-stack {
+        display: grid;
+        gap: 32px;
+      }
+
+      .plan-head {
+        max-width: 760px;
+      }
+
+      .plan-card.plan-floor {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      .plan-card.plan-floor img {
+        width: 100%;
+        max-height: none;
+        margin: 0 auto;
+        display: block;
+      }
+
       .mini-list {
         display: grid;
         gap: 12px;
@@ -536,11 +558,8 @@
       </section>
 
       <section class="section">
-        <div class="plan-grid compact-plan-grid">
-          <div class="plan-card plan-small">
-            <img src="assets/properties/sanno/floorplan-display.png" alt="山王民泊平面圖">
-          </div>
-          <div>
+        <div class="plan-stack">
+          <div class="plan-head">
             <p class="kicker">Layout</p>
             <h2>2 層一戶建，適合多人住宿配置</h2>
             <ul class="mini-list">
@@ -549,6 +568,9 @@
               <li>2F 為兩間和風臥室，另有獨立衛生間與洗面台。</li>
               <li>全屋骨架翻新完成，適合作為日本民泊投資參訪案例。</li>
             </ul>
+          </div>
+          <div class="plan-card plan-floor">
+            <img src="assets/properties/sanno/floorplan-display.png" alt="山王民泊平面圖">
           </div>
         </div>
       </section>
