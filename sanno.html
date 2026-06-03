@@ -264,6 +264,11 @@
         gap: 16px;
       }
 
+      .gallery.sanno-gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+      }
+
       .gallery figure {
         position: relative;
         overflow: hidden;
@@ -282,6 +287,26 @@
         aspect-ratio: 4 / 3;
         height: auto;
         object-fit: cover;
+      }
+
+      .sanno-gallery figure {
+        display: grid;
+        place-items: center;
+        min-height: 238px;
+        padding: 14px;
+      }
+
+      .sanno-gallery img {
+        width: auto;
+        max-width: 100%;
+        max-height: 214px;
+        aspect-ratio: auto;
+        object-fit: contain;
+        border-radius: 18px;
+      }
+
+      .sanno-gallery .source-limited img {
+        max-width: 360px;
       }
 
       .gallery figcaption {
@@ -322,12 +347,15 @@
       }
 
       .plan-card.plan-small {
-        max-width: 360px;
+        max-width: 420px;
         margin: 0 auto;
       }
 
       .plan-card.plan-small img {
-        max-height: 390px;
+        width: auto;
+        max-width: 360px;
+        max-height: none;
+        margin: 0 auto;
       }
 
       .mini-list {
@@ -430,7 +458,7 @@
     <main class="page">
       <section class="hero">
         <div class="photo-frame">
-          <img src="assets/properties/sanno/exterior-night.png" alt="山王民泊物件外觀">
+          <img src="assets/properties/sanno/exterior-night-original.jpg" alt="山王民泊物件外觀">
         </div>
         <div>
           <p class="kicker">Sanno Minpaku</p>
@@ -487,21 +515,21 @@
             <h2>外觀與室內</h2>
           </div>
         </div>
-        <div class="gallery">
-          <figure>
-            <img src="assets/properties/sanno/living-display.png" alt="山王民泊一樓休息區">
+        <div class="gallery sanno-gallery">
+          <figure class="source-limited">
+            <img src="assets/properties/sanno/living-source.png" alt="山王民泊一樓休息區">
             <figcaption>1F Lounge</figcaption>
           </figure>
-          <figure>
-            <img src="assets/properties/sanno/bedroom-display.png" alt="山王民泊和風臥室">
+          <figure class="source-limited">
+            <img src="assets/properties/sanno/bedroom-source.png" alt="山王民泊和風臥室">
             <figcaption>Japanese Room</figcaption>
           </figure>
           <figure>
-            <img src="assets/properties/sanno/exterior-day-display.png" alt="山王民泊白天外觀">
+            <img src="assets/properties/sanno/exterior-day.png" alt="山王民泊白天外觀">
             <figcaption>Exterior</figcaption>
           </figure>
           <figure>
-            <img src="assets/properties/sanno/tennoji-view.png" alt="山王周邊天王寺區域視野">
+            <img src="assets/properties/sanno/tennoji-view-original.jpg" alt="山王周邊天王寺區域視野">
             <figcaption>Tennoji Area</figcaption>
           </figure>
         </div>
@@ -510,7 +538,7 @@
       <section class="section">
         <div class="plan-grid compact-plan-grid">
           <div class="plan-card plan-small">
-            <img src="assets/properties/sanno/floorplan-display.png" alt="山王民泊平面圖">
+            <img src="assets/properties/sanno/floorplan-source.png" alt="山王民泊平面圖">
           </div>
           <div>
             <p class="kicker">Layout</p>
