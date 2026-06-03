@@ -44,7 +44,8 @@
     const image = images[activeIndex];
     preview.src = image.currentSrc || image.src;
     preview.alt = image.alt || "";
-    preview.style.maxWidth = image.naturalWidth && image.naturalWidth < 760 ? `${image.naturalWidth}px` : "";
+    const shouldKeepNativeSize = /source\.(png|jpe?g|webp)$/i.test(image.getAttribute("src") || "");
+    preview.style.maxWidth = shouldKeepNativeSize ? `${image.naturalWidth}px` : "";
     caption.textContent = image.alt || "";
     prevButton.hidden = images.length < 2;
     nextButton.hidden = images.length < 2;

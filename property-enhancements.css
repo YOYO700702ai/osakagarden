@@ -92,6 +92,8 @@ body {
 
 .property-lightbox__panel {
   position: relative;
+  display: grid;
+  justify-items: center;
   width: min(1180px, 100%);
   max-height: calc(100vh - 56px);
   padding: 18px;
